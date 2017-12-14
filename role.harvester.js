@@ -10,7 +10,7 @@ var roleHarvester = {
         }
         else {
 
-          if (STRUCTURE_SPAWN.energy < ((STRUCTURE_SPAWN.energyCapacity / 100) * 90)){
+          if (STRUCTURE_SPAWN.energy < (STRUCTURE_SPAWN.energyCapacity * 0.9){
             var targets = creep.room.find(FIND_STRUCTURES, {
               filter: (structure) => {
                       return (structure.structureType == STRUCTURE_EXTENSION || structure.structureType == STRUCTURE_SPAWN) &&
@@ -24,7 +24,7 @@ var roleHarvester = {
                         return (structure.structureType == STRUCTURE_CONTAINER) &&
                               structure.energy < structure.energyCapacity;
                             }
-              });
+                          });
 
             }
             if(targets.length > 0) {
