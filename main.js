@@ -67,7 +67,7 @@ module.exports.loop = function () {
             {memory: {role: 'cleaner', working: false}});
     }
       //if (Game.room.FIND_DROPPED_RESOURCES != undefined){
-        if(erectors.length < 1 && harvesters.length > 1) {
+        if(erectors.length < 0 && harvesters.length > 1) {
         var newName = 'Erector' + Game.time;
         console.log('Spawning new erector: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], newName,
