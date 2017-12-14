@@ -29,11 +29,13 @@ var roleHarvester = {
                           });
 
             }
+            for (i, (targets.energy < targets.energyCapacity),i++){
             if(targets.length > 0) {
-                if(creep.transfer(targets[0], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
-                    creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#ffffff'}});
+                if(creep.transfer(targets[i], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
+                    creep.moveTo(targets[i], {visualizePathStyle: {stroke: '#ffffff'}});
                 }
             }
+          }
         }
 	}
 };
