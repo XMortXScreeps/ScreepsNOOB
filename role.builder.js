@@ -1,7 +1,7 @@
 var roleBuilder = {
     /** @param {Creep} creep **/
     run: function(creep) {
-      var name = String.charAt(0).toUpperCase(creep.memory.role);
+      var name = creep.memory.role.string.CharAt(0).toUpperCase();
       creep.say(name);
 	    if(creep.memory.building && creep.carry.energy == 0) {
             creep.memory.building = false;
