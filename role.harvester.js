@@ -11,7 +11,7 @@ var roleHarvester = {
         }
         else {
 
-          if (Game.spawns.Spawn1.energy < Game.spawns.Spawn1.energyCapacity){
+          if (Game.spawns.Spawn1.energy < (Game.spawns.Spawn1.energyCapacity * 0.9)){
             creep.say('if');
             var targets = creep.room.find(FIND_STRUCTURES, {
               filter: (structure) => {
