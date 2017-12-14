@@ -27,7 +27,7 @@ module.exports.loop = function () {
     var cleaners = _.filter(Game.creeps, (creep) => creep.memory.role == 'cleaner');
     console.log('Cleaners: ' + cleaners.length);
 
-       if(harvesters.length < 1) {
+       if(harvesters.length < 2) {
         var newName = 'Harvester' + Game.time;
         console.log('Spawning new harvester: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,MOVE], newName,
