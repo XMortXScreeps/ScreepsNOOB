@@ -24,19 +24,20 @@ var roleHarvester = {
               creep.say('else');
                 var targets = creep.room.find(FIND_STRUCTURES, {
                   filter: (structure) => {
-                        return ((structure.structureType == STRUCTURE_CONTAINER))
+                        return (structure.structureType == STRUCTURE_CONTAINER)
+                        structure.energy < structure.energyCapacity;
                             }
                           });
 
             }
-            for (i, targets.energy < targets.energyCapacity,i++){
+
             if(targets.length > 0) {
                 if(creep.transfer(targets[i], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
                     creep.moveTo(targets[i], {visualizePathStyle: {stroke: '#ffffff'}});
                 }
             }
-          }
-        }
+
+      }
 	}
 };
 module.exports = roleHarvester;
