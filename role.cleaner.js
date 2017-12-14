@@ -1,12 +1,16 @@
+var roleHarvester = require('role.harvester');
 var roleCleaner = {
 
     /** @param {Creep} creep **/
     run: function(creep) {
-	    if(creep.carry.energy < creep.carryCapacity) {
+	    if(creep.carry.energy < creep.carryCapacity && creep.room.find(FIND_DROPPED_RESOURCES) != undefined) {
             var dropped_energy = creep.room.find(FIND_DROPPED_RESOURCES);
             if(creep.pickup(dropped_energy[0]) == ERR_NOT_IN_RANGE) {
                 creep.moveTo(dropped_energy[0], {visualizePathStyle: {stroke: '#ffaa00'}});
             }
+        }
+        else if (creep.room.find(FIND_DROPPED_RESOURCES) != undefined) {
+          roleHarvester.run(creep)
         }
         else {
             var targets = creep.room.find(FIND_STRUCTURES, {
@@ -21,6 +25,6 @@ var roleCleaner = {
                 }
             }
         }
-	}
+	  }
 };
 module.exports = roleCleaner;
