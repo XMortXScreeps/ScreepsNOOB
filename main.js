@@ -66,13 +66,13 @@ module.exports.loop = function () {
         Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,CARRY,MOVE,MOVE], newName,
             {memory: {role: 'cleaner', working: false}});
     }
-      if (Game.room.FIND_DROPPED_RESOURCES != undefined){
+      //if (Game.room.FIND_DROPPED_RESOURCES != undefined){
         if(erectors.length < 1 && harvesters.length > 1) {
         var newName = 'Erector' + Game.time;
         console.log('Spawning new erector: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], newName,
             {memory: {role: 'erector', working: false}});
-          }
+        //  }
     }
 
     if(Game.spawns['Spawn1'].spawning) {
