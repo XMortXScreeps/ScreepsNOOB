@@ -4,7 +4,7 @@ var roleCleaner = {
     run: function(creep) {
 	    if(creep.carry.energy < creep.carryCapacity) {
             var dropped_energy = creep.room.find(FIND_DROPPED_RESOURCES);
-            if(creep.harvest(dropped_energy[0]) == ERR_NOT_IN_RANGE) {
+            if(creep.pickup(dropped_energy[0]) == ERR_NOT_IN_RANGE) {
                 creep.moveTo(dropped_energy[0], {visualizePathStyle: {stroke: '#ffaa00'}});
             }
         }
