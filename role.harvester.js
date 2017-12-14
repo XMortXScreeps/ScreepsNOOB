@@ -19,6 +19,9 @@ var roleHarvester = {
                             structure.energy < structure.energyCapacity;
                           }
                         });
+                        if(creep.transfer(targets[0], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
+                            creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#ffffff'}});
+                        }
             }
             else {
               creep.say('else');
@@ -27,18 +30,12 @@ var roleHarvester = {
                         return ((structure.structureType == STRUCTURE_CONTAINER) && (STRUCTURE_CONTAINER.energy < STRUCTURE_CONTAINER.energyCapacity))
                             }
                           });
+                          if(targetsContainers.length > 0) {
+                              if(creep.transfer(targets, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
+                                  creep.moveTo(targets, {visualizePathStyle: {stroke: '#ffffff'}});
+                              }
+            }
 
-            }
-            if(targets.length > 0) {
-                if(creep.transfer(targets[0], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
-                    creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#ffffff'}});
-                }
-            }
-            if(targetsContainers.length > 0) {
-                if(creep.transfer(targets, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
-                    creep.moveTo(targets, {visualizePathStyle: {stroke: '#ffffff'}});
-                }
-            }
         }
 	}
 };
