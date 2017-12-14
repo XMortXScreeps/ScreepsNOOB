@@ -29,7 +29,7 @@ module.exports.loop = function () {
     var cleaners = _.filter(Game.creeps, (creep) => creep.memory.role == 'cleaner');
     console.log('Cleaners: ' + cleaners.length);
 
-    var erector = _.filter(Game.creeps, (creep) => creep.memory.role == 'erector');
+    var erectors = _.filter(Game.creeps, (creep) => creep.memory.role == 'erector');
     console.log('Erector: ' + cleaners.length);
 
        if(harvesters.length < 2) {
