@@ -19,24 +19,22 @@ var roleHarvester = {
                             structure.energy < structure.energyCapacity;
                           }
                         });
-                        if(creep.transfer(targets[0], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
-                            creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#ffffff'}});
-                        }
             }
             else {
               creep.say('else');
-                var targetsContainers = creep.room.find(FIND_STRUCTURES, {
+                var targets = creep.room.find(FIND_STRUCTURES, {
                   filter: (structure) => {
-                        return (structure.structureType == STRUCTURE_CONTAINER)
+                        return ((structure.structureType == STRUCTURE_CONTAINER))
                             }
                           });
-                          if(targetsContainers.length > 0 && (STRUCTURE_CONTAINER.energy < STRUCTURE_CONTAINER.energyCapacity)) {
-                              if(creep.transfer(targets[0], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
-                                  creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#ffffff'}});
-                              }
-                            }
-	                         }
-                         }
-                       }
+
+            }
+            if(targets.length > 0) {
+                if(creep.transfer(targets[0], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
+                    creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#ffffff'}});
+                }
+            }
+        }
+	}
 };
 module.exports = roleHarvester;
