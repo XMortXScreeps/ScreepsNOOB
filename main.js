@@ -82,5 +82,6 @@ module.exports.loop = function () {
         }
         if(creep.memory.role == 'cleaner') {
             roleCleaner.run(creep);
+        }
     }
 }
