@@ -11,6 +11,7 @@ var roleHarvester = {
         else {
 
           if (STRUCTURE_SPAWN.energy < (STRUCTURE_SPAWN.energyCapacity * 0.9)){
+            creep.say('if');
             var targets = creep.room.find(FIND_STRUCTURES, {
               filter: (structure) => {
                       return (structure.structureType == STRUCTURE_EXTENSION || structure.structureType == STRUCTURE_SPAWN) &&
