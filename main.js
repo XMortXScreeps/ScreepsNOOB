@@ -55,7 +55,7 @@ module.exports.loop = function () {
         if(cleaners.length < 1) {
         var newName = 'Cleaner' + Game.time;
         console.log('Spawning new cleaner: ' + newName);
-        Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,CARRY,MOVE], newName,
+        Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,CARRY,MOVE,MOVE], newName,
             {memory: {role: 'cleaner', working: false}});
     }
     if(Game.spawns['Spawn1'].spawning) {
