@@ -3,6 +3,7 @@ var roleCleaner = {
 
     /** @param {Creep} creep **/
     run: function(creep) {
+      creep.say(creep.memory.role);
 	    if(creep.carry.energy < creep.carryCapacity && creep.room.find(FIND_DROPPED_RESOURCES) != undefined) {
             var dropped_energy = creep.room.find(FIND_DROPPED_RESOURCES);
             if(creep.pickup(dropped_energy[0]) == ERR_NOT_IN_RANGE) {
