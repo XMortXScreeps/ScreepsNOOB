@@ -22,4 +22,4 @@ var roleCleaner = {
         }
 	}
 };
-module.exports = roleHarvester;
+module.exports = roleCleaner;
