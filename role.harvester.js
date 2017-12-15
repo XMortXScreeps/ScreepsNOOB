@@ -17,7 +17,7 @@ module.exports = {
 +            });
 +
 
-+            if(structure != undefined) {
++            else if(structure != undefined) {
 +                if(creep.transfer(structure, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
 +                    creep.moveTo(structure);
 +                }
