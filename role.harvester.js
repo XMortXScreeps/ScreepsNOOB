@@ -1,4 +1,4 @@
-
+var roleHarvester = {
 module.exports = {
      run: function(creep) {
        creep.say(creep.memory.role);
@@ -30,7 +30,8 @@ module.exports = {
                 creep.moveTo(source);
             }
         }
-
+      }
     }
   }
 };
+module.exports = roleHarvester;
