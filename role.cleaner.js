@@ -10,7 +10,7 @@ var roleCleaner = {
                 creep.moveTo(dropped_energy[0], {visualizePathStyle: {stroke: '#ffaa00'}});
             }
         }
-        else if (creep.room.find(FIND_DROPPED_RESOURCES) != undefined) {
+        else if (creep.room.find(FIND_DROPPED_RESOURCES) == undefined) {
           roleHarvester.run(creep)
         }
         else {
