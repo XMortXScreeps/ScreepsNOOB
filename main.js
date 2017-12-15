@@ -60,13 +60,11 @@ module.exports.loop = function () {
         Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,MOVE], newName,
             {memory: {role: 'repairer', working: false}});
     }
-      //if (Game.room.FIND_DROPPED_RESOURCES != undefined){
         if(cleaners.length < 0 && harvesters.length > 1) {
         var newName = 'Cleaner' + Game.time;
         console.log('Spawning new cleaner: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,CARRY,MOVE,MOVE], newName,
             {memory: {role: 'cleaner', working: false}});
-      //  }
     }
 
         if(erectors.length < 1 && harvesters.length > 1) {
@@ -74,7 +72,6 @@ module.exports.loop = function () {
         console.log('Spawning new erector: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], newName,
             {memory: {role: 'erector', working: false}});
-
     }
 
     if(Game.spawns['Spawn1'].spawning) {
