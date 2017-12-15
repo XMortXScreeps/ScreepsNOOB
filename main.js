@@ -39,7 +39,7 @@ module.exports.loop = function () {
         var newName = 'Harvester' + Game.time;
         console.log('Spawning new harvester: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,MOVE], newName,
-            {memory: {role: 'harvester'}});
+            {memory: {role: 'harvester', working: false}});
     }
 
         if(builders.length < 2 && harvesters.length > 1) {
