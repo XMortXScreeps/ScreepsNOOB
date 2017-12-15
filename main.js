@@ -48,7 +48,7 @@ module.exports.loop = function () {
     console.log('Cleaners: ' + cleaners.length);
 
     var erectors = _.filter(Game.creeps, (creep) => creep.memory.role == 'erector');
-    console.log('Erector: ' + cleaners.length);
+    console.log('Erector: ' + erectors.length);
 
        if(harvesters.length < harvestersMax) {
         var newName = 'Harvester' + Game.time;
