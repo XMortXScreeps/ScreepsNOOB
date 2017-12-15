@@ -38,8 +38,8 @@ module.exports.loop = function () {
     var repairers = _.filter(Game.creeps, (creep) => creep.memory.role == 'repairer');
     console.log('Repairers: ' + repairers.length);
 
-    if (Game.spawns['Spawn1'].room.find(FIND_DROPPED_RESOURCES) != undefined){
-      cleanersMax = 0;
+    if (Game.spawns['Spawn1'].room.find(FIND_DROPPED_RESOURCES) > 0){
+      cleanersMax = 1;
     } else {
       cleanersMax = 0;
     }
@@ -57,7 +57,7 @@ module.exports.loop = function () {
             {memory: {role: 'harvester', working: false}});
     }
 
-        if(builders.length < buildersMax&& harvesters.length >= harvesterFloor) {
+        if(builders.length < buildersMax && harvesters.length >= harvesterFloor) {
         var newName = 'Builder' + Game.time;
         console.log('Spawning new builder: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,MOVE], newName,
