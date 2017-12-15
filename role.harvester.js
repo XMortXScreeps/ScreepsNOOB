@@ -22,7 +22,9 @@ module.exports = {
             });
 
             if (structure == undefined) {
-              structure = creep.room.storage;
+              structure = creep.pos.findClosestByPath(FIND_STRUCTURES, {
+                  filter: (s) => s.structureType == STRUCTURE_CONTAINER && s.energy < s.energyCapacity
+              });
             }
 
             // if we found one
