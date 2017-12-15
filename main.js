@@ -18,14 +18,14 @@ module.exports.loop = function () {
   var erectorsMax = 1;
 
   var harvesterFloor = 2;
-/*
+
     for(var name in Memory.creeps) {
         if(!Game.creeps[name]) {
             delete Memory.creeps[name];
             console.log('Clearing non-existing creep memory:', name);
         }
     }
-*/
+
     var harvesters = _.filter(Game.creeps, (creep) => creep.memory.role == 'harvester');
     console.log('Harvesters: ' + harvesters.length);
 
@@ -37,13 +37,13 @@ module.exports.loop = function () {
 
     var repairers = _.filter(Game.creeps, (creep) => creep.memory.role == 'repairer');
     console.log('Repairers: ' + repairers.length);
-
+/*
     if (Game.room.find(FIND_DROPPED_RESOURCES) != undefined){
       cleanersMax = 1;
     } else {
       cleanersMax = 0;
     }
-
+*/
     var cleaners = _.filter(Game.creeps, (creep) => creep.memory.role == 'cleaner');
     console.log('Cleaners: ' + cleaners.length);
 
