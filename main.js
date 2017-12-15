@@ -42,7 +42,7 @@ module.exports.loop = function () {
             {memory: {role: 'harvester', working: false}});
     }
 
-        if(builders.length < 2 && harvesters.length > 1) {
+        if(builders.length < 1 && harvesters.length > 1) {
         var newName = 'Builder' + Game.time;
         console.log('Spawning new builder: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,MOVE], newName,
@@ -69,7 +69,7 @@ module.exports.loop = function () {
       //  }
     }
 
-        if(erectors.length < 0 && harvesters.length > 1) {
+        if(erectors.length < 1 && harvesters.length > 1) {
         var newName = 'Erector' + Game.time;
         console.log('Spawning new erector: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], newName,
