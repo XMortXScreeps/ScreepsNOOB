@@ -37,13 +37,13 @@ module.exports.loop = function () {
 
     var repairers = _.filter(Game.creeps, (creep) => creep.memory.role == 'repairer');
     console.log('Repairers: ' + repairers.length);
-
+/*
     if (Game.resources.find(FIND_DROPPED_RESOURCES) != undefined){
       cleanersMax = 1;
     } else {
       cleanersMax = 0;
     }
-
+*/
     var cleaners = _.filter(Game.creeps, (creep) => creep.memory.role == 'cleaner');
     console.log('Cleaners: ' + cleaners.length);
 
