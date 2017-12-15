@@ -1,4 +1,5 @@
 module.exports = {
+
     // a function to run the logic for this role
     run: function(creep) {
         creep.say(creep.memory.role);
@@ -20,10 +21,10 @@ module.exports = {
                 filter: (s) => s.energy < s.energyCapacity
             });
 
-            if (structure != undefined) {
+            if (structure == undefined) {
               structure = creep.room.storage;
             }
-            
+
             // if we found one
             if (structure != undefined) {
                 // try to transfer energy, if it is not in range
@@ -38,6 +39,7 @@ module.exports = {
             // find closest source
             var source = creep.pos.findClosestByPath(FIND_SOURCES_ACTIVE);
             // try to harvest energy, if the source is not in range
+
             if (creep.harvest(source) == ERR_NOT_IN_RANGE) {
                 // move towards the source
                 creep.moveTo(source);
