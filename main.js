@@ -18,14 +18,14 @@ module.exports.loop = function () {
   var erectorsMax = 1;
 
   var harvesterFloor = 2;
-
+/*
     for(var name in Memory.creeps) {
         if(!Game.creeps[name]) {
             delete Memory.creeps[name];
             console.log('Clearing non-existing creep memory:', name);
         }
     }
-
+*/
     var harvesters = _.filter(Game.creeps, (creep) => creep.memory.role == 'harvester');
     console.log('Harvesters: ' + harvesters.length);
 
