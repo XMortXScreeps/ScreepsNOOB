@@ -39,11 +39,11 @@ module.exports.loop = function () {
     console.log('Repairers: ' + repairers.length);
 
     if (Game.spawns['Spawn1'].room.find(FIND_DROPPED_RESOURCES) != undefined){
-      cleanersMax = 1;
+      cleanersMax = 0;
     } else {
       cleanersMax = 0;
     }
-    
+
     var cleaners = _.filter(Game.creeps, (creep) => creep.memory.role == 'cleaner');
     console.log('Cleaners: ' + cleaners.length);
 
