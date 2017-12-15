@@ -1,5 +1,4 @@
 var roleHarvester = {
-module.exports = {
      run: function(creep) {
        creep.say(creep.memory.role);
          if(creep.memory.working == true && creep.carry.energy == 0) {
@@ -32,6 +31,5 @@ module.exports = {
         }
       }
     }
-  }
 };
 module.exports = roleHarvester;
