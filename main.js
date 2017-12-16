@@ -67,7 +67,7 @@ module.exports.loop = function () {
         var newName = 'Upgrader' + Game.time;
         console.log('Spawning new upgrader: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], newName,
-            {memory: {role: 'upgrader'}});
+            {memory: {role: 'upgrader', working: false}});
     }
         if(repairers.length < repairersMax && harvesters.length >= harvesterFloor) {
         var newName = 'Repairer' + Game.time;
