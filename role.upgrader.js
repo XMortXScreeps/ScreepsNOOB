@@ -15,8 +15,8 @@ module.exports = {
         // if creep is supposed to repair something
         if (creep.memory.working == true) {
 
-            if(creep.upgradeController(creep.room.controller) == ERR_NOT_IN_RANGE) {
-                creep.moveTo(creep.room.controller);
+            if(creep.upgradeController(STRUCTURE_CONTROLLER) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(STRUCTURE_CONTROLLER);
             }
         // if creep is supposed to harvest energy from source
         else {
