@@ -66,13 +66,13 @@ module.exports.loop = function () {
         if(upgraders.length < upgradersMax && harvesters.length >= harvesterFloor) {
         var newName = 'Upgrader' + Game.time;
         console.log('Spawning new upgrader: ' + newName);
-        Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE,MOVE], newName,
+        Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], newName,
             {memory: {role: 'upgrader'}});
     }
         if(repairers.length < repairersMax && harvesters.length >= harvesterFloor) {
         var newName = 'Repairer' + Game.time;
         console.log('Spawning new repairer: ' + newName);
-        Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,MOVE], newName,
+        Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], newName,
             {memory: {role: 'repairer', working: false}});
     }
         if(cleaners.length < cleanersMax && harvesters.length >= harvesterFloor) {
