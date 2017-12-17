@@ -16,7 +16,7 @@ module.exports.loop = function () {
   var upgradersMax = 3;
   var repairersMax = 2;
   var cleanersMax;
-  var erectorsMax = 1;
+  var erectorsMax = 2;
 
   var harvesterFloor = 2;
 
