@@ -9,7 +9,7 @@ module.exports = {
 
     if (creep.harvest(source) == ERR_NOT_IN_RANGE) {
         // move towards the source
-        creep.moveTo(source, {visualizePathStyle: {stroke: '#ffffff'});
+        creep.moveTo(source, {visualizePathStyle: {stroke: '#ffffff'}});
         }
     }
   }
