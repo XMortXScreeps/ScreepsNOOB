@@ -1,4 +1,6 @@
+var drainSources = require('function.drainSources');
 var roleHarvester = require('role.harvester');
+
 var roleCleaner = {
 
     /** @param {Creep} creep **/
