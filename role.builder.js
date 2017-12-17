@@ -27,7 +27,7 @@ module.exports = {
                 // try to repair it, if it is out of range
                 if (creep.build(constructionSite) == ERR_NOT_IN_RANGE) {
                     // move towards it
-                    creep.moveTo(constructionSite, {visualizePathStyle: {stroke: '#ffffff'});
+                    creep.moveTo(constructionSite, {visualizePathStyle: {stroke: '#ffffff'}});
                 }
             }
             // if we can't fine one
