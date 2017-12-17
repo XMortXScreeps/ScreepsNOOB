@@ -7,6 +7,7 @@ var roleBuilder = require('role.builder');
 var roleRepairer = require('role.repairer');
 var roleCleaner = require('role.cleaner');
 var roleErector = require('role.erector');
+var drainSources = require('function.drainSources');
 
 module.exports.loop = function () {
 
