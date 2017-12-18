@@ -5,7 +5,7 @@ var roleBuilder = require('role.builder');
 module.exports = {
 
 run: function(creep)
-  switch (creep.memory.role) {
+  switch(creep.memory.role) {
       case 'erector':
       if (creep.memory.working == true) {
 
