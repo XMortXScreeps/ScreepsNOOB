@@ -22,13 +22,6 @@ var harvesterFloor = 2;
 
 module.exports.loop = function () {
 
-
-  if (harvesters.length >= harvesterFloor){
-    towerRepair = false;
-  } else {
-    towerRepair = true;
-  }
-
   tower.run(myRooms, towerRepair)
 
     for(var name in Memory.creeps) {
@@ -55,6 +48,14 @@ module.exports.loop = function () {
     } else {
       cleanersMax = 0;
     }
+
+
+    if (harvesters.length >= harvesterFloor){
+      towerRepair = false;
+    } else {
+      towerRepair = true;
+    }
+
 
     var cleaners = _.filter(Game.creeps, (creep) => creep.memory.role == 'cleaner');
     console.log('Cleaners: ' + cleaners.length);
