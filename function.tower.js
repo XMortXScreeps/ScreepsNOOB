@@ -1,5 +1,5 @@
 module.exports = {
-    run: function(myRooms, harvesters, harvesterFloor) {
+    run: function(myRooms) {
         var hostiles = Game.rooms[myRooms].find(FIND_HOSTILE_CREEPS);
         var towers = Game.rooms[myRooms].find(FIND_MY_STRUCTURES, {filter: {structureType: STRUCTURE_TOWER}});
         //if there are hostiles - attakc them
@@ -20,7 +20,7 @@ module.exports = {
                     console.log("Tower is healing Creeps.");
                 }
             }
-            if(harvesters.length > harvesterFloor){
+            if(Game.spawns.Spawn1.room.energyAvailable > Game.spawns.Spawn1.energyCapacity){
                for(var i in towers){
                     //...repair Buildings! :) But ONLY until HALF the energy of the tower is gone.
                     //Because we don't want to be exposed if something shows up at our door :)

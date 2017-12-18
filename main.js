@@ -123,7 +123,7 @@ module.exports.loop = function () {
         }
     }
 
-    tower.run(myRooms, towerRepair, harvesters, harvesterFloor)
+    tower.run(myRooms)
 
 
 }
