@@ -18,10 +18,16 @@ module.exports.loop = function () {
   var repairersMax = 2;
   var cleanersMax;
   var erectorsMax = 2;
-
+  var towerRepair;
   var harvesterFloor = 2;
 
-  tower.run(myRooms)
+  if (harvesters.length >= harvesterFloor){
+    towerRepair = false;
+  } else {
+    towerRepair = true;
+  }
+
+  tower.run(myRooms, towerRepair)
 
     for(var name in Memory.creeps) {
         if(!Game.creeps[name]) {
