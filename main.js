@@ -18,7 +18,7 @@ var repairersMax = 2;
 var cleanersMax;
 var erectorsMax = 2;
 var towerRepair;
-var harvesterFloor = 2;
+var harvesterFloor = 1;
 
 module.exports.loop = function () {
 
