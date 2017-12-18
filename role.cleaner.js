@@ -3,7 +3,7 @@ var decideState = require('function.decideState');
 
 var roleHarvester = require('role.harvester');
 
-var roleCleaner = {
+module.exports = {
 
     /** @param {Creep} creep **/
     run: function(creep) {
@@ -32,4 +32,3 @@ var roleCleaner = {
         }
 	  }
 };
-module.exports = roleCleaner;
