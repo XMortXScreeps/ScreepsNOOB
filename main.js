@@ -17,7 +17,7 @@ var upgradersMax = 5;
 var repairersMax = 2;
 var cleanersMax;
 var erectorsMax = 2;
-var towerRepair;
+var towerRepair = true;
 var harvesterFloor = 1;
 
 module.exports.loop = function () {
@@ -57,7 +57,6 @@ module.exports.loop = function () {
         Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE,MOVE], newName,
             {memory: {role: 'harvester', working: false}});
     }
-
         if(builders.length < buildersMax && harvesters.length >= harvesterFloor) {
         var newName = 'Builder' + Game.time;
         console.log('Spawning new builder: ' + newName);
@@ -105,7 +104,7 @@ module.exports.loop = function () {
     for(var name in Game.creeps) {
         var creep = Game.creeps[name];
         if(creep.memory.role == 'harvester') {
-            roleHarvester.run(creep, harvesters, harvesterFloor, towerRepair);
+            roleHarvester.run(creep);
         }
         if(creep.memory.role == 'upgrader') {
             roleUpgrader.run(creep);
