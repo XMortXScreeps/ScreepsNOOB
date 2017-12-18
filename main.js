@@ -22,14 +22,14 @@ var harvesterFloor = 2;
 
 module.exports.loop = function () {
 
-  tower.run(myRooms, towerRepair)
-
     for(var name in Memory.creeps) {
         if(!Game.creeps[name]) {
             delete Memory.creeps[name];
             console.log('Clearing non-existing creep memory:', name);
         }
     }
+
+
 
     var harvesters = _.filter(Game.creeps, (creep) => creep.memory.role == 'harvester');
     console.log('Harvesters: ' + harvesters.length);
@@ -43,25 +43,20 @@ module.exports.loop = function () {
     var repairers = _.filter(Game.creeps, (creep) => creep.memory.role == 'repairer');
     console.log('Repairers: ' + repairers.length);
 
+    var cleaners = _.filter(Game.creeps, (creep) => creep.memory.role == 'cleaner');
+    console.log('Cleaners: ' + cleaners.length);
+
+    var erectors = _.filter(Game.creeps, (creep) => creep.memory.role == 'erector');
+    console.log('Erector: ' + erectors.length);
+
+
+
     if (Game.spawns['Spawn1'].room.find(FIND_DROPPED_RESOURCES) > 0){
       cleanersMax = 1;
     } else {
       cleanersMax = 0;
     }
 
-
-    if (harvesters.length >= harvesterFloor){
-      towerRepair = false;
-    } else {
-      towerRepair = true;
-    }
-
-
-    var cleaners = _.filter(Game.creeps, (creep) => creep.memory.role == 'cleaner');
-    console.log('Cleaners: ' + cleaners.length);
-
-    var erectors = _.filter(Game.creeps, (creep) => creep.memory.role == 'erector');
-    console.log('Erector: ' + erectors.length);
 
        if(harvesters.length < harvestersMax) {
         var newName = 'Harvester' + Game.time;
@@ -94,13 +89,14 @@ module.exports.loop = function () {
         Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,CARRY,MOVE,MOVE], newName,
             {memory: {role: 'cleaner', working: false}});
     }
-
         if(erectors.length < erectorsMax && harvesters.length >= harvesterFloor) {
         var newName = 'Erector' + Game.time;
         console.log('Spawning new erector: ' + newName);
         Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], newName,
             {memory: {role: 'erector', working: false}});
     }
+
+
 
     if(Game.spawns['Spawn1'].spawning) {
         var spawningCreep = Game.creeps[Game.spawns['Spawn1'].spawning.name];
@@ -110,6 +106,9 @@ module.exports.loop = function () {
             Game.spawns['Spawn1'].pos.y,
             {align: 'left', opacity: 0.8});
     }
+
+
+
     for(var name in Game.creeps) {
         var creep = Game.creeps[name];
         if(creep.memory.role == 'harvester') {
@@ -131,4 +130,8 @@ module.exports.loop = function () {
             roleErector.run(creep);
         }
     }
+
+    tower.run(myRooms, towerRepair)
+
+
 }
