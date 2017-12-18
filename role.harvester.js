@@ -40,9 +40,9 @@ module.exports = {
         }
 
         if (harvesters.length <= harvesterFloor){
-          console.log('test');
           towerRepair == false;
         } else {
+          console.log('test');
           towerRepair == true;
         }
     }
