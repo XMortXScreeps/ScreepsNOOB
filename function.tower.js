@@ -29,7 +29,11 @@ module.exports = {
                         var closestDamagedStructure = towers[i].pos.findClosestByRange(FIND_STRUCTURES, {filter: (s) => s.hits < s.hitsMax && s.structureType != STRUCTURE_WALL});
         	            if(closestDamagedStructure) {
         	 	            towers[i].repair(closestDamagedStructure);
-        	 	            console.log("The tower is repairing buildings.");
+                        towers[i].room.visual.text(
+                        'The tower is repairing ' + closestDamagedStructure.structureType,
+                        towers[i].pos.x + 1,
+                        towers[i].pos.y,
+                        {align: 'left', opacity: 0.8});
                         }
                     }
                 }
