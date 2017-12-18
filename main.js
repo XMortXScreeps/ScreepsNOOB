@@ -11,9 +11,9 @@ var drainSources = require('function.drainSources');
 
 module.exports.loop = function () {
 
-  var harvestersMax = 4;
+  var harvestersMax = 2;
   var buildersMax = 1;
-  var upgradersMax = 3;
+  var upgradersMax = 5;
   var repairersMax = 2;
   var cleanersMax;
   var erectorsMax = 2;
