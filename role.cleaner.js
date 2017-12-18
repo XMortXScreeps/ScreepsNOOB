@@ -1,4 +1,6 @@
 var drainSources = require('function.drainSources');
+var decideState = require('function.decideState');
+
 var roleHarvester = require('role.harvester');
 
 var roleCleaner = {
