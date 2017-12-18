@@ -7,10 +7,11 @@ var roleBuilder = require('role.builder');
 var roleRepairer = require('role.repairer');
 var roleCleaner = require('role.cleaner');
 var roleErector = require('role.erector');
-var drainSources = require('function.drainSources');
+
+var tower = require('function.tower');
 
 module.exports.loop = function () {
-
+  var myrooms = 'E41N36';
   var harvestersMax = 2;
   var buildersMax = 1;
   var upgradersMax = 5;
@@ -19,6 +20,8 @@ module.exports.loop = function () {
   var erectorsMax = 2;
 
   var harvesterFloor = 2;
+
+  tower.run(myRooms)
 
     for(var name in Memory.creeps) {
         if(!Game.creeps[name]) {
