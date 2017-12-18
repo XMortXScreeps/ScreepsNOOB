@@ -39,10 +39,10 @@ module.exports = {
           drainSources.run(creep);
         }
 
-        if (harvesters.length <= harvesterFloor){
-          return towerRepair = false;
-        } else {
+        if (harvesters.length >= harvesterFloor){
           return towerRepair = true;
+        } else {
+          return towerRepair = false;
         }
     }
 };
