@@ -20,7 +20,7 @@ module.exports = {
                     console.log("Tower is healing Creeps.");
                 }
             }
-            if(Game.spawns.Spawn1.room.energyAvailable > Game.spawns.Spawn1.energyCapacity){
+            if(Game.spawns.Spawn1.room.energyAvailable > Game.spawns.Spawn1.energyCapacity * 2){
                for(var i in towers){
                     //...repair Buildings! :) But ONLY until HALF the energy of the tower is gone.
                     //Because we don't want to be exposed if something shows up at our door :)
