@@ -40,9 +40,9 @@ module.exports = {
         }
 
         if (harvesters.length >= harvesterFloor){
-          return towerRepair = true;
+          return towerRepair == true;
         } else {
-          return towerRepair = false;
+          return towerRepair == false;
         }
     }
 };
