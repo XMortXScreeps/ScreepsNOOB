@@ -2,11 +2,13 @@ var drainSources = require('function.drainSources');
 
 var roleBuilder = require('role.builder');
 
+var role;
+
 module.exports = {
 
 run: function(creep)
 
-var role = creep.memory.role;
+role = creep.memory.role;
 
   switch(role) {
       case 'erector':
