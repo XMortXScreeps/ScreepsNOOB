@@ -6,7 +6,7 @@ var roleUpgrader = require('role.upgrader');
 module.exports = {
 
     // a function to run the logic for this role
-    run: function(creep, harvesters, harvesterFloor) {
+    run: function(creep, harvesters, harvesterFloor, towerRepair) {
         decideState.run(creep);
         // if creep is supposed to transfer energy to the spawn or an extension
         if (creep.memory.working == true) {
@@ -39,10 +39,10 @@ module.exports = {
           drainSources.run(creep);
         }
 
-        if (harvesters.length >= harvesterFloor){
-          towerRepair == true;
+        if (harvesters.length <= harvesterFloor){
+          return towerRepair == false;
         } else {
-          towerRepair == false;
+          return towerRepair == true;
         }
     }
 };
