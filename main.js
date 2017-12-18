@@ -10,16 +10,18 @@ var roleErector = require('role.erector');
 
 var tower = require('function.tower');
 
+var myRooms = 'E41N36';
+var harvestersMax = 2;
+var buildersMax = 1;
+var upgradersMax = 5;
+var repairersMax = 2;
+var cleanersMax;
+var erectorsMax = 2;
+var towerRepair;
+var harvesterFloor = 2;
+
 module.exports.loop = function () {
-  var myRooms = 'E41N36';
-  var harvestersMax = 2;
-  var buildersMax = 1;
-  var upgradersMax = 5;
-  var repairersMax = 2;
-  var cleanersMax;
-  var erectorsMax = 2;
-  var towerRepair;
-  var harvesterFloor = 2;
+
 
   if (harvesters.length >= harvesterFloor){
     towerRepair = false;
