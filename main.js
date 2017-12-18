@@ -51,13 +51,6 @@ module.exports.loop = function () {
 
 
 
-    if (Game.spawns['Spawn1'].room.find(FIND_DROPPED_RESOURCES) > 0){
-      cleanersMax = 1;
-    } else {
-      cleanersMax = 0;
-    }
-
-
        if(harvesters.length < harvestersMax) {
         var newName = 'Harvester' + Game.time;
         console.log('Spawning new harvester: ' + newName);
@@ -124,7 +117,7 @@ module.exports.loop = function () {
             roleRepairer.run(creep);
         }
         if(creep.memory.role == 'cleaner') {
-            roleCleaner.run(creep);
+            roleCleaner.run(creep, cleanersMax);
         }
         if(creep.memory.role == 'erector') {
             roleErector.run(creep);

@@ -6,7 +6,7 @@ var roleHarvester = require('role.harvester');
 module.exports = {
 
     /** @param {Creep} creep **/
-    run: function(creep) {
+    run: function(creep, cleanersMax) {
       creep.say(creep.memory.role);
 	    if(creep.carry.energy < creep.carryCapacity && creep.room.find(FIND_DROPPED_RESOURCES) != undefined) {
             var dropped_energy = creep.room.find(FIND_DROPPED_RESOURCES);
@@ -29,6 +29,12 @@ module.exports = {
                     creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#ffffff'}});
                 }
             }
+        }
+
+        if (Game.spawns['Spawn1'].room.find(FIND_DROPPED_RESOURCES) > 0){
+          cleanersMax = 1;
+        } else {
+          cleanersMax = 0;
         }
 	  }
 };
