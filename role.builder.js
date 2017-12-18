@@ -1,5 +1,5 @@
 var drainSources = require('function.drainSources');
-var drainSources = require('function.decideState');
+var decideState = require('function.decideState');
 
 var roleUpgrader = require('role.upgrader');
 
