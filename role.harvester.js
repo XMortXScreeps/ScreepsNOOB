@@ -44,6 +44,5 @@ module.exports = {
         } else {
           return towerRepair = true;
         }
-
     }
 };
