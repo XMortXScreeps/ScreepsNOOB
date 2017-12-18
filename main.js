@@ -11,7 +11,7 @@ var roleErector = require('role.erector');
 var tower = require('function.tower');
 
 module.exports.loop = function () {
-  var myrooms = 'E41N36';
+  var myRooms = 'E41N36';
   var harvestersMax = 2;
   var buildersMax = 1;
   var upgradersMax = 5;
