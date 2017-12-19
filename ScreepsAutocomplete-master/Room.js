@@ -38,11 +38,9 @@ Room = {
 Room.prototype =
 {
     /**
-     * The Controller structure of this room, if present, otherwise undefined.
-     *
      * @see {@link http://support.screeps.com/hc/en-us/articles/203079011-Room#controller}
      *
-     * @type {undefined|StructureController}
+     * @property {StructureController|undefined} controller The Controller structure of this room, if present, otherwise undefined.
      */
     controller: null,
 
@@ -109,14 +107,6 @@ Room.prototype =
      * @type {undefined|StructureTerminal}
      */
     terminal: null,
-
-    /**
-     * A RoomVisual object for this room. You can use this object to draw simple shapes (lines, circles, text labels) in the room.
-     * @see {@link http://docs.screeps.com/api/#Room.visual}
-     *
-     * @type {RoomVisual}
-     */
-    visual: null,
 
     /**
      * Create new ConstructionSite at the specified location.
@@ -384,5 +374,5 @@ Room.prototype =
                             }
                         }
      */
-    lookForAtArea: function(type, top, left, bottom, right, asArray) { },
+    lookForAtArea: function(type, top, left, bottom, right, asArray) { }
 };

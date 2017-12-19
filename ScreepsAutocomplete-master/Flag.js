@@ -17,7 +17,7 @@ Flag.prototype =
      *
      * @see {@link http://support.screeps.com/hc/en-us/articles/203079181-Flag#color}
      *
-     * @type {number}
+     * @type {string}
      */
     color: "",
 
@@ -47,7 +47,7 @@ Flag.prototype =
      *
      * @see {@link http://support.screeps.com/hc/en-us/articles/203079181-Flag#secondaryColor}
      *
-     * @type {number}
+     * @type {string}
      */
     secondaryColor: "",
 
