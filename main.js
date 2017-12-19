@@ -9,12 +9,6 @@ module.exports.loop = function () {
 
     memoryCleanup.run();
 
-/*    for(var name in Game.creeps) {
-      var creep = Game.creeps[name];
-      spawnLogic.run(creep);
-      actionLogic.run(creep);
-    }
-*/
     for(var myRooms in Game.rooms) {
       for(var name in Game.creeps) {
         var creep = Game.creeps[name];
