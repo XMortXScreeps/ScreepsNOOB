@@ -10,6 +10,7 @@ module.exports.loop = function () {
     for(var myRooms in Game.rooms) {
       //var spawnInRoom = Game.spawns.rooms[myRooms].name;
       //console.log(spawnInRoom);
+      console.log('Energy available in '+ myRooms +' for use to spawn:' + Game.spawns.myRooms.room.energyAvailable);
       for(var name in Game.creeps) {
         var creep = Game.creeps[name];
         spawnLogic.run(creep, myRooms);
@@ -18,6 +19,4 @@ module.exports.loop = function () {
 
       tower.run(myRooms)
     }
-
-    console.log('Energy available for use to spawn:' + Game.spawns.Spawn1.room.energyAvailable);
 }
