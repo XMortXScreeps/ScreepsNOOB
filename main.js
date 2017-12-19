@@ -3,7 +3,7 @@ var memoryCleanup = require('function.memoryCleanup');
 var actionLogic = require('function.actionLogic');
 var spawnLogic = require('function.spawnLogic');
 
-var myRooms = 'E41N36';
+//var myRooms = 'E41N36';
 
 module.exports.loop = function () {
 
@@ -15,10 +15,10 @@ module.exports.loop = function () {
       actionLogic.run(creep);
     }
 
-  //  for(var name in Game.rooms) {
+    for(var myRooms in Game.rooms) {
     //  var myRooms = Game.rooms[name];
       tower.run(myRooms)
-  //  }
+    }
 
     console.log('Energy available for use to spawn:' + Game.spawns.Spawn1.room.energyAvailable);
 
