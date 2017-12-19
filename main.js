@@ -16,7 +16,7 @@ module.exports.loop = function () {
     }
 
     for(var room in Game.rooms) {
-      var myRooms = Game.rooms.name[room];
+      var myRooms = Game.rooms[room];
       tower.run(myRooms)
     }
 
