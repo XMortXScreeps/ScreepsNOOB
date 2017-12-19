@@ -50,7 +50,7 @@ module.exports = {
               {memory: {role: 'upgrader', working: false}});
           //  } else if () {
 
-            }
+            //}
     }
         if(repairers.length < repairersMax && harvesters.length >= harvesterFloor) {
         var newName = 'Repairer' + Game.time;
