@@ -8,8 +8,8 @@ module.exports.loop = function () {
     memoryCleanup.run();
 
     for(var myRooms in Game.rooms) {
-      for(var name in Game.creeps) {
-        var creep = Game.creeps[name];
+      for(var name in myRooms.creeps) {
+        var creep = myRooms.creeps[name];
         spawnLogic.run(creep);
         actionLogic.run(creep);
       }
@@ -17,5 +17,4 @@ module.exports.loop = function () {
     }
 
     console.log('Energy available for use to spawn:' + Game.spawns.Spawn1.room.energyAvailable);
-
 }

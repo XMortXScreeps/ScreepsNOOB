@@ -45,8 +45,12 @@ module.exports = {
         if(upgraders.length < upgradersMax && harvesters.length >= harvesterFloor) {
         var newName = 'Upgrader' + Game.time;
         console.log('Spawning new upgrader: ' + newName);
-        Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], newName,
-            {memory: {role: 'upgrader', working: false}});
+        if(Game.spawns.Spawn1.room.energyAvailable <= 300 && harvesters.length < 2) {
+          Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], newName,
+              {memory: {role: 'upgrader', working: false}});
+            } else if () {
+
+            }
     }
         if(repairers.length < repairersMax && harvesters.length >= harvesterFloor) {
         var newName = 'Repairer' + Game.time;
