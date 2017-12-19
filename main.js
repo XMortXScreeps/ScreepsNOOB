@@ -15,7 +15,7 @@ module.exports.loop = function () {
       actionLogic.run(creep);
     }
 
-    for(var room Game.rooms) {
+    for(var room in Game.rooms) {
       var myRooms = Game.rooms.name[room];
       tower.run(myRooms)
     }
