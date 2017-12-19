@@ -9,6 +9,7 @@ var roleCleaner = require('role.cleaner');
 var roleErector = require('role.erector');
 
 var tower = require('function.tower');
+var memoryCleanup = require('function.memoryCleanup');
 
 var myRooms = 'E41N36';
 var harvestersMax = 2;
@@ -22,12 +23,7 @@ var harvesterFloor = 1;
 
 module.exports.loop = function () {
 
-    for(var name in Memory.creeps) {
-        if(!Game.creeps[name]) {
-            delete Memory.creeps[name];
-            console.log('Clearing non-existing creep memory:', name);
-        }
-    }
+    memoryCleanup.run();
 
 
 
