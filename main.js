@@ -3,8 +3,6 @@ var memoryCleanup = require('function.memoryCleanup');
 var actionLogic = require('function.actionLogic');
 var spawnLogic = require('function.spawnLogic');
 
-//var myRooms = 'E41N36';
-
 module.exports.loop = function () {
 
     memoryCleanup.run();
