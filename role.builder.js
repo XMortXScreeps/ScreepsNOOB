@@ -10,7 +10,7 @@ module.exports = {
             // find exit to target room
             var exit = creep.room.findExitTo(creep.memory.target);
             // move to exit
-            creep.moveTo(creep.pos.findClosestByRange(exit), {visualizePathStyle: {stroke: '#ff0000', opacity: 1}});
+            creep.moveTo(creep.pos.findClosestByRange(exit));
             // return the function to not do anything else
             return;
         }
