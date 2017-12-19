@@ -36,7 +36,7 @@ module.exports = {
                 // try to transfer energy, if it is not in range
                 if (creep.transfer(structure, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
                     // move towards it
-                    creep.moveTo(structure), {visualizePathStyle: {stroke: '#6e42f4', opacity: 1}};
+                    creep.moveTo(structure, {visualizePathStyle: {stroke: '#6e42f4', opacity: 1}});
                 }
             }
         }
@@ -56,7 +56,7 @@ module.exports = {
                 // try to withdraw energy, if the container is not in range
                 if (creep.withdraw(container, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
                     // move towards it
-                    creep.moveTo(container), {visualizePathStyle: {stroke: '#0000ff', opacity: 1}};
+                    creep.moveTo(container, {visualizePathStyle: {stroke: '#0000ff', opacity: 1}});
                 }
             }
         }
