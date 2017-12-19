@@ -9,7 +9,7 @@ module.exports.loop = function () {
 
     for(var myRooms in Game.rooms) {
       //var spawnInRoom = Game.spawns.rooms[myRooms].name;
-      console.log(spawnInRoom);
+      //console.log(spawnInRoom);
       for(var name in Game.creeps) {
         var creep = Game.creeps[name];
         spawnLogic.run(creep, myRooms);
