@@ -8,7 +8,7 @@ module.exports.loop = function () {
     memoryCleanup.run();
 
     for(var myRooms in Game.rooms) {
-      console.log(myRooms.creeps);
+      console.log(myRooms.creeps.name);
       for(var name in myRooms.creeps) {
         var creep = myRooms.creeps[name];
         spawnLogic.run(creep);
