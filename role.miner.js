@@ -17,7 +17,7 @@ module.exports = {
         // if creep is not on top of the container
         else {
             // move towards it
-            creep.moveTo(container);
+            creep.moveTo(container), {visualizePathStyle: {stroke: '#0000ff', opacity: 1}};
         }
     }
 };
