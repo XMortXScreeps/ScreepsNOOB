@@ -12,4 +12,5 @@ module.exports = {
         creep.moveTo(source, {visualizePathStyle: {stroke: '#ffffff'}});
         }
     }
+    console.log('Energy available for use to spawn:' + Game.spawns.Spawn1.room.energyAvailable);
   }
