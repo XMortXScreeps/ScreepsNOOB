@@ -8,10 +8,12 @@ module.exports.loop = function () {
     memoryCleanup.run();
 
     for(var myRooms in Game.rooms) {
+      var spawnInRoom = Game.spawns.rooms[myRooms].name;
+      console.log(spawnInRoom);
       for(var name in Game.creeps) {
         var creep = Game.creeps[name];
-        spawnLogic.run(creep);
-        actionLogic.run(creep);
+        spawnLogic.run(creep, myRooms);
+        actionLogic.run(creep, myRooms);
       }
 
       tower.run(myRooms)
