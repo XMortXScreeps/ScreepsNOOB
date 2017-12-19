@@ -15,4 +15,5 @@ module.exports.loop = function () {
     }
 
     tower.run(myRooms)
+    console.log('Energy available for use to spawn:' + Game.spawns.Spawn1.room.energyAvailable);
 }
