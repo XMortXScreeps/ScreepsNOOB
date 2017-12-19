@@ -1,6 +1,7 @@
 module.exports = {
     // a function to run the logic for this role
     run: function (creep) {
+      creep.say(creep.memory.role);
         // get source
         let source = Game.getObjectById(creep.memory.sourceId);
         // find container next to source

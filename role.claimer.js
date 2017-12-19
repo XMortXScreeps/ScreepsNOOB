@@ -1,6 +1,7 @@
 module.exports = {
     // a function to run the logic for this role
     run: function(creep) {
+      creep.say(creep.memory.role);
         // if in target room
         if (creep.room.name != creep.memory.target) {
             // find exit to target room
