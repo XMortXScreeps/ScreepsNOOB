@@ -1,4 +1,5 @@
-var roleLorry = require('role.lorry');
+var role
+roleUpgrader = require('role.upgrader');
 
 module.exports = {
     // a function to run the logic for this role
@@ -41,7 +42,7 @@ module.exports = {
             // if no constructionSite is found
             else {
                 // go upgrading the controller
-                roleLorry.run(creep);
+                roleUpgrader.run(creep);
             }
         }
         // if creep is supposed to get energy
