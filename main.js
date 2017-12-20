@@ -19,6 +19,7 @@ module.exports.loop = function() {
     for (let name in Game.creeps) {
         // run creep logic
         Game.creeps[name].runRole();
+        console.log(Game.creeps[name]);
     }
 
     // find all towers
