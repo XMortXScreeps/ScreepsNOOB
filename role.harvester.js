@@ -39,6 +39,11 @@ module.exports = {
                     creep.moveTo(structure, {visualizePathStyle: {stroke: '#6e42f4', opacity: 1}});
                 }
             }
+            // if no constructionSite is found
+            else {
+                // go upgrading the controller
+                roleUpgrader.run(creep);
+            }
         }
         // if creep is supposed to harvest energy from source
         else {
