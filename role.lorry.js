@@ -23,8 +23,7 @@ module.exports = {
                 // we use the arrow operator to define it
                 filter: (s) => (s.structureType == STRUCTURE_SPAWN
                              || s.structureType == STRUCTURE_EXTENSION
-                             || s.structureType == STRUCTURE_TOWER
-                             || s.structureType == STRUCTURE_STORAGE)
+                             || s.structureType == STRUCTURE_TOWER)
                              && s.energy < s.energyCapacity
             });
 
@@ -45,7 +44,7 @@ module.exports = {
         else {
             // find closest container
             let container = creep.pos.findClosestByPath(FIND_STRUCTURES, {
-                filter: s => s.structureType == STRUCTURE_CONTAINER && s.store[RESOURCE_ENERGY] > 0
+                filter: s => s.structureType == STRUCTURE_CONTAINER && s.store[RESOURCE_ENERGY] > 100
             });
 
             if (container == undefined) {
