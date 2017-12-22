@@ -3,7 +3,7 @@ require('prototype.creep');
 require('prototype.tower');
 require('prototype.spawn');
 
-// Use this to change spawn memory - Game.spawns.Spawn1.memory.minCreeps = { upgrader: 4, lorry: 4, builder: 2, repairer: 2, wallRepairer: 1, harvester: 0, miner: 0, claimer: 0 }
+// Use this to change spawn memory - Game.spawns.Spawn1.memory.minCreeps = { upgrader: 0, lorry: 0, builder: 0, repairer: 0, wallRepairer: 0, harvester: 0, miner: 0, claimer: 0 }
 // Add longDistanceHarvesters to spawn memory - Game.spawns.Spawn1.memory.minLongDistanceHarvesters = {}
 
 module.exports.loop = function() {
